@@ -54,7 +54,7 @@ export const useAuthStore=create((set,get)=>({
         try{
             const responce=await axiosInstance.post("/auth/login",data,{withCredentials:true});
            set({authUser:responce.data})
-           toast.success("Profile Pic updated");
+           toast.success("Login successfull");
            get().connectSocket();
            return true;
         }catch(error){
